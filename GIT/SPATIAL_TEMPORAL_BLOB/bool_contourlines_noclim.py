@@ -1,4 +1,6 @@
 """
+Plots spatial and temporal (seasonal) extent of the blob
+
 For normal operation (process + plot):
 cd /home/bblaser/scripts/Beni_Scripts/analyze_extreme_events/ python bool_contourlines.py
 
@@ -14,6 +16,8 @@ cd /home/bblaser/scripts/Beni_Scripts/analyze_extreme_events/  python bool_conto
 python bool_contourlines.py --output
 
 
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
 #%% 
 #--------- IMPORT REQUIRED MODULES ---------#
