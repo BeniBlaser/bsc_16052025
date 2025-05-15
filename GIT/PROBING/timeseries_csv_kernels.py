@@ -3,6 +3,9 @@
 Regional time series analysis of anomalies.
 Creates a 4x2 grid of subplots, each containing 3 time series plots (Temperature, Production, and POC Flux).
 Highlights marine heatwave periods and uses color schemes based on region type.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
 #%%
 import pandas as pd
