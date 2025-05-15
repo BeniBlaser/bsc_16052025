@@ -1,3 +1,9 @@
+"""
+Plot selected kernel regions on top of anomaly plot.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
+"""
 #%%
 #--------- IMPORT REQUIRED MODULES ---------#
 import xarray as xr
@@ -81,48 +87,37 @@ def convert_lon_to_180(lon):
     return lon - 360 if lon > 180 else lon
 
 # Define study regions - these are in -180 to 180 format
+
 STUDY_REGIONS = [
     {
-        'name': 'gulf_alaska',
-        'lon_min': -153, 'lon_max': -135,
-        'lat_min': 55, 'lat_max': 60
+        'name': 'High BGC South',
+        'lon_min': -122.75, 'lon_max': -121.5,
+        'lat_min': 31.75, 'lat_max': 32.8
     },    
-
     {
-        'name': 'lownpp_north',
-        'lon_min': -131., 'lon_max': -127,
-        'lat_min': 42, 'lat_max': 47.25
+        'name': 'Low BGC South',
+        'lon_min': -122.7, 'lon_max': -120,
+        'lat_min': 33.5, 'lat_max': 35
+    },    
+    {
+        'name': 'High BGC Central',
+        'lon_min': -127, 'lon_max': -125,
+        'lat_min': 39.5, 'lat_max': 41
     },
     {
-        'name': 'highnpp_north',
-        'lon_min': -126.5, 'lon_max': -124,
-        'lat_min': 43, 'lat_max': 49
+        'name': 'Low BGC Central',
+        'lon_min': -126, 'lon_max': -124,
+        'lat_min': 35.5, 'lat_max': 37.5
     },
     {
-        'name': 'low_npp_northerngyre',
-        'lon_min': -133.5, 'lon_max': -131.5,
-        'lat_min': 49.5, 'lat_max': 52.5
+        'name': 'High BGC North',
+        'lon_min': -126.25, 'lon_max': -124.75,
+        'lat_min': 43, 'lat_max': 44.5
     },
     {
-        'name': 'lownpp_central',
-        'lon_min': -130, 'lon_max': -124,
-        'lat_min': 35.5, 'lat_max': 38.5
-    },
-    {
-        'name': 'highnpp_central',
-        'lon_min': -131, 'lon_max': -125,
-        'lat_min': 39, 'lat_max': 41.5
-    },
-
-    {
-        'name': 'lownpp_south',
-        'lon_min': -122.5, 'lon_max': -118,
-        'lat_min': 33, 'lat_max': 35.25
-    },
-    {
-        'name': 'highnpp_south',
-        'lon_min': -123, 'lon_max': -120.75,
-        'lat_min': 33, 'lat_max': 31
+        'name': 'Low BGC North',
+        'lon_min': -129, 'lon_max': -127.5,
+        'lat_min': 42.15, 'lat_max': 43.25
     },
 ]
 
@@ -150,15 +145,15 @@ REGION_COLORS = {
 
     "gulf_alaska": "blue",
 
-    "highnpp_south": "green",        
-    "highnpp_central": "green",    
-    "highnpp_north": "green",
+    "High BGC South": "green",        
+    "High BGC North": "green",    
+    "High BGC Central": "green",
     
 
-    "lownpp_south": "red", 
-    "low_npp_northerngyre": "red",
-    "lownpp_central": "red",
-    "lownpp_north": "red",
+    "Low BGC South": "red", 
+    "Low BGC North": "red",
+    "Low BGC Central": "red",
+
 }
 
 def add_regions_to_map(ax, use_360=False, show_labels=True, linewidth=1.5):
@@ -220,7 +215,7 @@ def add_regions_to_map(ax, use_360=False, show_labels=True, linewidth=1.5):
                     center_lon, center_lat, region_name,
                     color='black', fontweight='bold', ha='center', va='center',
                     transform=transform,
-                    bbox=dict(facecolor='white', alpha=0.7, boxstyle='round', pad=0.3)
+                    bbox=dict(facecolor='white', alpha=0.7, boxstyle='round', pad=0.5)
                 )
     
     else:
@@ -261,7 +256,7 @@ def add_regions_to_map(ax, use_360=False, show_labels=True, linewidth=1.5):
                     center_lon, center_lat, region_name,
                     color='black', fontweight='bold', ha='center', va='center',
                     transform=transform,
-                    bbox=dict(facecolor='white', alpha=0.7, boxstyle='round', pad=0.3)
+                    bbox=dict(facecolor='white', alpha=0.7, boxstyle='round', pad=0.5)
                 )
 
 def create_region_map(output_dir):
@@ -340,7 +335,7 @@ VLIMS = {
 # Plot titles and labels
 TITLES = {
     'temp': 'Temperature',
-    'TOT_PROD': 'Total Production',
+    'TOT_PROD': 'NPP',
     'POC_FLUX_IN': 'POC Flux'
 }
 
@@ -680,7 +675,7 @@ def plot_anomalies_only():
     print("\nCreating anomalies-only plot with data-driven limits, discrete colormap, and region labels...")
     
     # Adjust figure size for a single row
-    fig = plt.figure(figsize=(26, 8), dpi=300)
+    fig = plt.figure(figsize=(16, 7), dpi=300)
     
     # Create gridspec for a single row
     gs = fig.add_gridspec(1, n, width_ratios=[1, 1, 1], wspace=0.4)
@@ -852,7 +847,7 @@ def plot_anomalies_only():
             colors = [REGION_COLORS.get(name, "royalblue") for name in region_names]
             
             # Calculate vertical spacing for labels
-            label_spacing = 1.8  # degrees of latitude between labels
+            label_spacing = 3  # degrees of latitude between labels
             
             # Add each region name and callout line
             for idx, (name, color) in enumerate(zip(region_names, colors)):
@@ -864,7 +859,7 @@ def plot_anomalies_only():
                     label_x, text_y, name,
                     color=color, fontweight='bold', ha='left', va='center',
                     transform=ccrs.PlateCarree(),
-                    bbox=dict(facecolor='white', alpha=1, boxstyle='square', pad=0.2, edgecolor=color)
+                    bbox=dict(facecolor='white', alpha=0.7, boxstyle='square', pad=0.1, edgecolor=color)
                 )
                 
                 # Get region center for callout line
@@ -888,7 +883,7 @@ def plot_anomalies_only():
     
     # Add overall title with slightly reduced y position
     plt.suptitle('Northeast Pacific Ocean - Selected subregions for Probing', 
-                fontsize=16, y=0.97)
+                fontsize=16, y=0.85)
     
     # Save figure with tight layout to further reduce whitespace
     output_file = os.path.join(OUTPUT_DIR, 'anomalies_only_analysis.png')
