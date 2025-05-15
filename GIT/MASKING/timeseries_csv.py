@@ -1,7 +1,9 @@
-#!/usr/bin/env python3
 """
 Plot time series of anomalies (2011-2021) comparing all thresholds and whole region.
 Creates continuous timeline plots with no gaps between years for better visualization.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
 #%%
 import pandas as pd
