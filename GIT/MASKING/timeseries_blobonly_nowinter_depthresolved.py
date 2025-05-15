@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Create a comprehensive timeseries analysis spanning 2011-2021, including:
 1. Pre-Blob (2011-2013): Whole domain statistics
@@ -10,6 +9,9 @@ Each period is compared to the appropriate climatology:
 - MHW periods (2014-2016) use the same MHW mask applied to climatology years
 
 IMPORTANT: This version only includes months April (003) through November (011)
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
 # %%
 import xarray as xr
