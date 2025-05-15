@@ -1,9 +1,10 @@
 """
-Plots anomalies of chosen variables in monthly resolution
+Plot monthly resolved anomalies of selected variables.
 
-Author: Beni Blaser
-This script was created with assitance from Claude Sonnet 3.7, ran on Copilot. It helped creating, debugging and commenting the code.
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
+
 
 #%%
 #--------- IMPORT REQUIRED MODULES ---------#
