@@ -3,6 +3,10 @@
 Correlation analysis between temperature, production, and POC flux anomalies.
 Creates scatter plots with linear regression and Spearman rank correlation coefficients
 with Fisher z-transformation confidence intervals for different threshold datasets.
+
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
 #%%
 import pandas as pd
