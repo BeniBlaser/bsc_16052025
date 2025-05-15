@@ -1,8 +1,10 @@
-#!/usr/bin/env python3
 """
 Regional correlation analysis script for anomaly data with explicit CSV paths.
 Creates a combined 8x3 plot showing all regions and their correlation patterns 
 for Temperature, Production, and POC Flux anomalies.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
 #%%
 import pandas as pd
