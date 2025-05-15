@@ -1,6 +1,10 @@
-#!/usr/bin/env python3
-# Seasonal Mean Anomaly Visualization Script for Northeast Pacific Ocean
-# Focused on generating 1×3 grid showing May-Jul 2014 seasonal mean anomalies
+"""
+Plot seasonal anomalies of selected variables.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
+"""
+
 #%%
 #--------- IMPORT REQUIRED MODULES ---------#
 import xarray as xr
