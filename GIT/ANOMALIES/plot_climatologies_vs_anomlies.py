@@ -1,3 +1,10 @@
+"""
+Plot anomalies 2014-2016 of selected variables.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
+"""
+
 #%%
 #--------- IMPORT REQUIRED MODULES ---------#
 import xarray as xr
