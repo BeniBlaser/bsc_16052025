@@ -1,3 +1,10 @@
+"""
+Plots anomalies of chosen variables in monthly resolution
+
+Author: Beni Blaser
+This script was created with assitance from Claude Sonnet 3.7, ran on Copilot. It helped creating, debugging and commenting the code.
+"""
+
 #%%
 #--------- IMPORT REQUIRED MODULES ---------#
 import xarray as xr
