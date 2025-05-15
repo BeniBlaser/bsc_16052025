@@ -1,4 +1,9 @@
-#!/usr/bin/env python3
+"""
+Calculating statistics of the masks generate by timeseries script.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
+"""
 #%%
 # Import libraries
 import xarray as xr
