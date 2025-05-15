@@ -1,0 +1,60 @@
+/cluster/apps/nss/gcc-8.2.0/python/3.11.2/x86_64/lib64/python3.11/site-packages/xarray/backends/plugins.py:71: RuntimeWarning: Engine 'cfgrib' loading failed:
+Cannot find the ecCodes library
+  warnings.warn(f"Engine {name!r} loading failed:\n{ex}", RuntimeWarning)
+Load the fields:
+2011
+load the variable for the year
+calculate the boolean
+put into list
+2012
+load the variable for the year
+calculate the boolean
+put into list
+2013
+load the variable for the year
+calculate the boolean
+put into list
+2014
+load the variable for the year
+calculate the boolean
+put into list
+2015
+load the variable for the year
+calculate the boolean
+put into list
+2016
+load the variable for the year
+calculate the boolean
+put into list
+2017
+load the variable for the year
+calculate the boolean
+put into list
+2018
+load the variable for the year
+calculate the boolean
+put into list
+2019
+load the variable for the year
+calculate the boolean
+put into list
+2020
+load the variable for the year
+calculate the boolean
+put into list
+2021
+load the variable for the year
+calculate the boolean
+put into list
+concatenate list
+specify datatype
+done
+Do morphological operations.
+Smooth the boolean according to hobday2016.
+Do morphological operations.
+Smooth the boolean according to koehn2024.
+Saving
+/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/boolean_arrays/roms_only exists already. Do nothing. 
+/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/boolean_arrays/roms_only/present exists already. Do nothing.
+boolean_array_hobday2016_threshold_and_climatology_O2_37zlevs_full_1x1meanpool_downsampling_2011-2021analysisperiod_10perc_2011-2021baseperiod_fixedbaseline_11aggregation_31smoothing.nc
+Saving done

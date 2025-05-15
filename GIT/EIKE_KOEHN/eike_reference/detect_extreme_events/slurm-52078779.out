@@ -1,0 +1,5 @@
+/cluster/apps/nss/gcc-8.2.0/python/3.11.2/x86_64/lib64/python3.11/site-packages/xarray/backends/plugins.py:71: RuntimeWarning: Engine 'cfgrib' loading failed:
+Cannot find the ecCodes library
+  warnings.warn(f"Engine {name!r} loading failed:\n{ex}", RuntimeWarning)
+/var/spool/slurm/slurmd/state/job52078779/slurm_script: line 4: 41855 Killed                  python calc_boolean_array.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=52078779.batch. Some of the step tasks have been OOM Killed.

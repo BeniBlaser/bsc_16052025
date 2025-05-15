@@ -1,0 +1,139 @@
+# reference_case.yaml file
+#Created on Apr 26 2022
+#author: Eike E Koehn (adapted from Urs Hofmann)
+
+config_file: "/home/koehne/Documents/publications/paper_future_simulations/scripts/modules/case00.yaml"
+
+# ocean grid setup
+grid_name: "pactcs30"
+grid_file: "/nfs/kryo/work/loher/ROMS/pactcs30/grd/pactcs30_grd.nc"
+
+# list model simulation names
+model_configs: ["roms_only","romsoc_fully_coupled"]
+scenarios:     ["present","ssp245","ssp585"]
+
+# prespinup directory
+dir_roms_only_pre_spinup: "/nfs/meso/work/loher/ROMS/future_sim/hind_isoneutral/avg/"
+
+# spinup directories
+dir_roms_only_present_spinup: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/spinup_roms/present/monthly/avg/" #"/nfs/meso/work/loher/ROMS/future_sim/hind_isoneutral/avg/"
+dir_roms_only_ssp245_spinup: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/spinup_roms/ssp245/monthly/avg/" #"/nfs/meso/work/loher/ROMS/future_sim/hind_isoneutral_swf_coupling_region_SSP245/avg/"
+dir_roms_only_ssp585_spinup: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/spinup_roms/ssp585/monthly/avg/" #"/nfs/meso/work/loher/ROMS/future_sim/hind_isoneutral_swf_coupling_region_SSP585/avg/"
+dir_roms_only_present_spinup_zlevs: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/spinup_roms/present/monthly/z_avg/"
+dir_roms_only_ssp245_spinup_zlevs: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/spinup_roms/ssp245/monthly/z_avg/"
+dir_roms_only_ssp585_spinup_zlevs: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/spinup_roms/ssp585/monthly/z_avg/"
+
+# directories
+dir_roms_only_present_raw: "/nfs/meso/work/loher/ROMS/future_sim/hind_isoneutral_swf_coupling_region/avg/"
+dir_roms_only_ssp245_raw:  "/nfs/meso/work/loher/ROMS/future_sim/hind_isoneutral_swf_coupling_region_SSP245/avg/"
+dir_roms_only_ssp585_raw:  "/nfs/meso/work/loher/ROMS/future_sim/hind_isoneutral_swf_coupling_region_SSP585/avg/"
+dir_romsoc_fully_coupled_present_raw:    "/net/meso/work/loher/ROMSOC/ROMSOC_PacificYYYY_era5frc_COSMOorg_GPU_newcoupledhindcast/roms_output/" 
+dir_romsoc_fully_coupled_ssp245_raw:     "/nfs/meso/work/loher/ROMSOC/future_SSP245_YYYY/roms_output/"  
+dir_romsoc_fully_coupled_ssp585_raw:     "/nfs/meso/work/loher/ROMSOC/future_SSP585_YYYY/roms_output/"  
+
+dir_roms_only_present_daily: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/present/daily/avg/"
+dir_roms_only_ssp245_daily:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp245/daily/avg/"
+dir_roms_only_ssp585_daily:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp585/daily/avg/"
+dir_romsoc_fully_coupled_present_daily:    "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/present/daily/avg/" 
+dir_romsoc_fully_coupled_ssp245_daily:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp245/daily/avg/"  
+dir_romsoc_fully_coupled_ssp585_daily:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp585/daily/avg/"  
+
+dir_roms_only_present_daily_zlevs: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/present/daily/z_avg/"
+dir_roms_only_ssp245_daily_zlevs:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp245/daily/z_avg/"
+dir_roms_only_ssp585_daily_zlevs:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp585/daily/z_avg/"
+dir_romsoc_fully_coupled_present_daily_zlevs:    "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/present/daily/z_avg/" 
+dir_romsoc_fully_coupled_ssp245_daily_zlevs:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp245/daily/z_avg/"  
+dir_romsoc_fully_coupled_ssp585_daily_zlevs:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp585/daily/z_avg/"  
+
+dir_roms_only_present_monthly: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/present/monthly/avg/"
+dir_roms_only_ssp245_monthly:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp245/monthly/avg/"
+dir_roms_only_ssp585_monthly:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp585/monthly/avg/"
+dir_romsoc_fully_coupled_present_monthly:    "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/present/monthly/avg/" 
+dir_romsoc_fully_coupled_ssp245_monthly:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp245/monthly/avg/" 
+dir_romsoc_fully_coupled_ssp585_monthly:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp585/monthly/avg/" 
+
+dir_roms_only_present_monthly_zlevs: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/present/monthly/z_avg/"
+dir_roms_only_ssp245_monthly_zlevs:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp245/monthly/z_avg/"
+dir_roms_only_ssp585_monthly_zlevs:  "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/roms_only/ssp585/monthly/z_avg/"
+dir_romsoc_fully_coupled_present_monthly_zlevs:    "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/present/monthly/z_avg/"  
+dir_romsoc_fully_coupled_ssp245_monthly_zlevs:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp245/monthly/z_avg/"  
+dir_romsoc_fully_coupled_ssp585_monthly_zlevs:     "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/romsoc_fully_coupled/ssp585/monthly/z_avg/"  
+
+# model atmospheric/forcing fields (daily)
+dir_roms_only_present_daily_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/roms_only/present/daily/"
+dir_roms_only_ssp245_daily_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/roms_only/ssp245/daily/"
+dir_roms_only_ssp585_daily_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/roms_only/ssp585/daily/"
+dir_romsoc_fully_coupled_present_daily_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/romsoc_fully_coupled/present/daily/" 
+dir_romsoc_fully_coupled_ssp245_daily_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/romsoc_fully_coupled/ssp245/daily/" 
+dir_romsoc_fully_coupled_ssp585_daily_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/romsoc_fully_coupled/ssp585/daily/"  
+
+# model atmospheric/forcing fields (monthly)
+dir_roms_only_present_monthly_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/roms_only/present/monthly/"
+dir_roms_only_ssp245_monthly_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/roms_only/ssp245/monthly/"
+dir_roms_only_ssp585_monthly_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/roms_only/ssp585/monthly/"
+dir_romsoc_fully_coupled_present_monthly_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/romsoc_fully_coupled/present/monthly/" 
+dir_romsoc_fully_coupled_ssp245_monthly_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/romsoc_fully_coupled/ssp245/monthly/" 
+dir_romsoc_fully_coupled_ssp585_monthly_atmospheric_forcing: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/forcing_data/romsoc_fully_coupled/ssp585/monthly/"  
+
+dir_root_model_output_regridded:       "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/regridded_model_output/"
+dir_root_thresholds_and_climatologies: "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/thresholds_and_climatology/"
+dir_root_boolean_arrays:               "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/boolean_arrays/"
+dir_root_labeled_arrays:               "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/labeled_arrays/"
+dir_root_event_coordinates:            "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/event_coordinates/"
+dir_root_event_characteristics:        "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/event_characteristics/"
+dir_root_mapped_characteristics:       "/nfs/kryo/work/koehne/roms/analysis/pactcs30/future_sim/extreme_analysis/mapped_characteristics/"
+
+# monthly variables
+monthly_vars: ['zeta','u','v','temp','salt','PO4','NO3','SiO3','O2','DIC','Alk','ZOOC','rho','w','hbls','pCO2air','FG_CO2','PCO2OC','POC_FLUX_IN','TOT_PROD','NITRIF','DENITRIF','TOT_CHL','TOT_PHYTOC']
+
+# grid parameters
+grid_zlevels_type: "full"
+grid_zlevs: [0,-5,-10,-15,-20,-25,-30,-35,-40,-45,-50,-55,-60,-65,-70,-75,-80,-85,-90,-95,-100,-110,-120,-130,-140,-150,-165,-180,-200,-225,-250,-280,-310,-350,-400,-450,-500]
+grid_nzlevs: 37
+
+#grid_zlevels_type: "coarse"
+#grid_zlevs: [0,-10,-20,-30,-40,-50,-60,-70,-80,-90,-100,-120,-140,-165,-200,-250,-310,-400,-500]
+#grid_nzlevs: 19
+
+#grid_zlevels_type: "custom"
+#grid_zlevs: [0,-10,-20,-30,-40,-50,-60,-70,-80,-90,-100,-125,-150,-175,-200,-225,-250,-275,-300,-325,-350,-375,-400,-450,-500]
+#grid_nzlevs: 25
+
+grid_variables_to_regrid: "temp,time,hbls,O2,DIC,Alk,salt,rho,zeta,NO3,PO4,SiO3,TOT_CHL,TOT_PROD"
+grid_fac_horizontal_downsampling: 1
+grid_type_horizontal_downsampling: "meanpool"
+
+# spinup parameters
+spinup_start_year: 2000
+spinup_end_year: 2010
+
+# hindcast analysis parameters
+hindcast_analysis_start_year: 2011 # 2010
+hindcast_analysis_end_year: 2021 # 2021
+hindcast_analysis_period_temporal_resolution: "daily"
+
+# threshold parameters
+threshold_variable_name: "temp"
+threshold_percentile: 80
+threshold_period_start_year: 2011
+threshold_period_end_year: 2021
+threshold_baseline: "fixed"
+threshold_daysinyear: 365
+threshold_aggregation_window_size: 11
+threshold_smoothing_window_size: 31
+
+# boolean smoothing parameters
+boolean_smoothing_type: "hobday2016" # "koehn2024"
+#boolean_temporal_smoothing_kernel_size: 5
+#boolean_horizontal_smoothing_kernel_size: 1
+#boolean_vertical_smoothing_kernel_size: 1
+
+# index extraction (calculation of characteristics) parameters
+keep_only_surface_events: True
+keep_only_long_events: False
+
+# labeled region limits
+labeled_southern_boundary: -20    # °N
+labeled_northern_boundary: 62     # °N
+labeled_western_boundary: 200     # °E
+labeled_eastern_boundary: 300     # °E

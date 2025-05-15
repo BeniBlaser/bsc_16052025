@@ -1,0 +1,4 @@
+/cluster/apps/nss/gcc-8.2.0/python/3.11.2/x86_64/lib64/python3.11/site-packages/xarray/backends/plugins.py:71: RuntimeWarning: Engine 'cfgrib' loading failed:
+Cannot find the ecCodes library
+  warnings.warn(f"Engine {name!r} loading failed:\n{ex}", RuntimeWarning)
+slurmstepd: error: *** JOB 53307470 ON eu-fn-2t-08 CANCELLED AT 2024-03-31T17:00:33 ***

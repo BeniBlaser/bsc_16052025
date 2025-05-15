@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/nfs/195.176.108.79/fs1202/usys_ibp_up_1/koehne/Documents/publications/paper_future_simulations/scripts/detect_extreme_events/calc_boolean_array.py", line 234, in <module>
+    params = read_config_files(casedir+casename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 238, in read_config_files
+FileNotFoundError: [Errno 2] No such file or directory: '/home/koehne/Documents/publications/paper_future_simulations/scripts/modules/cases/case00.yaml'
