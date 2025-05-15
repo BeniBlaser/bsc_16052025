@@ -2,6 +2,9 @@
 """
 Script to extract rectangular regions from NetCDF ocean data files using corner coordinates.
 Also calculates monthly climatologies from extracted regions.
+
+Author: Beni Blaser  
+This script was developed with assistance from Claude Sonnet 3.7 (via Copilot), which supported code creation, debugging, and documentation.
 """
 # %%
 import os
